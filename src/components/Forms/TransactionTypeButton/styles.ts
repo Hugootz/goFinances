@@ -11,7 +11,7 @@ interface containerProps {
   isActive: boolean;
   type: "up" | "down";
 }
-export const Container = styled(RectButton)<containerProps>`
+export const Container = styled(TouchableOpacity)<containerProps>`
   width: 48%;
   flex-direction: row;
   align-items: center;

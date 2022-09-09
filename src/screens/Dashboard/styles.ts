@@ -1,9 +1,8 @@
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-import { FlatList } from "react-native";
+import { FlatList, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 import { Feather } from "@expo/vector-icons";
 import { DataListProps } from ".";
-import { BorderlessButton } from "react-native-gesture-handler";
 export const Container = styled.View`
   flex: 1;
 
@@ -87,4 +86,4 @@ export const TransactionList = styled(
   showsVerticalScrollIndicator: false,
 })``;
 
-export const LogoutButton = styled(BorderlessButton)``;
+export const LogoutButton = styled(TouchableOpacity)``;
