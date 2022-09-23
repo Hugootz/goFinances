@@ -1,7 +1,8 @@
 import React from "react";
-import "react-native-gesture-handler";
-import { RFPercentage } from "react-native-responsive-fontsize";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Register } from "./src/screens/Register";
+import "intl";
+import "intl/locale-data/jsonp/pt-BR";
 import AppLoading from "expo-app-loading";
 import { ThemeProvider } from "styled-components";
 import theme from "./src/global/styles/theme";
@@ -23,10 +24,12 @@ export default function App() {
     return <AppLoading />;
   }
   return (
-    <ThemeProvider theme={theme}>
-      <NavigationContainer>
-        <AppRoutes />
-      </NavigationContainer>
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider theme={theme}>
+        <NavigationContainer>
+          <AppRoutes />
+        </NavigationContainer>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }
