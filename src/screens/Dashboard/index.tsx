@@ -199,7 +199,7 @@ export function Dashboard() {
             <Title>Listagem</Title>
             <TransactionList
               data={transactions}
-              keyExtractor={(item) => item.id}
+              keyExtractor={(item: any) => item.id}
               renderItem={({ item }) => <TransactionCard data={item} />}
             />
           </Transactions>
