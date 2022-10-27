@@ -1,7 +1,8 @@
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import React from "react";
-import { StatusBar } from "react-native";
+import { StatusBar, LogBox } from "react-native";
 import { Register } from "./src/screens/Register";
+
 import "intl";
 import "intl/locale-data/jsonp/pt-BR";
 import AppLoading from "expo-app-loading";
@@ -24,6 +25,7 @@ export default function App() {
     Poppins_500Medium,
     Poppins_700Bold,
   });
+  LogBox.ignoreLogs(["EventEmitter.removeListener"]);
   if (!fontsLoaded) {
     return <AppLoading />;
   }
